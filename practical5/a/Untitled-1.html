@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Robbers</title>
+</head>
+<body>
+  Prime number between 1 to 100:<textarea id="prime"cols="31" rows="3"></textarea><br>
+  Enter number:<input type="number" id="n1"><br>
+  Sum of digits:<textarea id="sum" cols="10" rows="1"></textarea><br>
+  <button onclick="results()">result</button>
+  <script>
+    function results(){
+      var primeno="";
+      for(var j=1;j<=100;j++){
+        var count=0;
+        for(var i=1;i<=j;i++){
+          if(j%i==0){
+            count++;
+          }
+        }
+        if(count==2){
+        primeno+=j+", ";
+        } 
+      } document.getElementById("prime").innerHTML=primeno;
+      var sum=0;
+      var num=document.getElementById("n1").value;
+      num=parseInt(num);
+      while(num>0){
+        sum+=num%10;
+        num=Math.floor(num/10);
+      }
+      document.getElementById("sum").innerHTML=+sum;
+    }
+   </script>
+</body>
+</html>

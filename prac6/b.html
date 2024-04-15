@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Word Count</title>
+</head>
+<body>
+    <h1>Word Count</h1>
+    <input type="text" id="sentenceInput" placeholder="Enter a sentence">
+    <button onclick="countWords()">Count Words</button>
+    <p id="wordCount"></p>
+<script>
+    function countWords() {
+        const sentence = document.getElementById("sentenceInput").value;
+        let wordCount = 0;
+        let inWord = false;
+
+        for (let i = 0; i < sentence.length; i++) {
+            if (sentence[i] !== ' ' && !inWord) {
+                wordCount++;
+                inWord = true;
+            } else if (sentence[i] === ' ') {
+                inWord = false;
+            }
+        }
+
+        document.getElementById("wordCount").textContent = `Number of words: ${wordCount}`;
+    }
+</script>
+</body>
+</html>

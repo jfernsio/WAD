@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Native Objects in JavaScript</title>
+</head>
+<body>
+    <h1>Native Objects in JavaScript</h1>
+        <h2>String Object</h2>
+        <p>String Length: <span id="stringLength"></span></p>
+        <h2>Date Object</h2>
+        <p>Current Date: <span id="currentDate"></span></p>
+        <h2>Array Object</h2>
+        <p>Array Length: <span id="arrayLength"></span></p>
+        <h2>Math Object</h2>
+        <p>Random Number: <span id="random"></span> </p> 
+<script>
+    //String Object
+    const myString = "Hello, World!";
+    document.getElementById("stringLength").textContent = myString.length;
+
+    // Date Object
+    const currentDate = new Date();
+    document.getElementById("currentDate").textContent = currentDate.toDateString();
+
+    // Array Object
+    const myArray = [1, 2, 3, 4, 5];
+    document.getElementById("arrayLength").textContent = myArray.length;
+
+    const random = (Math.random());
+    document.getElementById('random').textContent = random;
+</script>
+</body>
+</html>

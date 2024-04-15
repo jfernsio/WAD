@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+Original string is= Hi FYBSCIT, Welcomes to L.S. Raheja
+<p id="demo">
+</p>
+<script>
+var str1="RCB";
+var op1, op2, op3, op4, op5, op6, op7, op8;
+op1=str1.charAt(3);
+op2=str1.charCodeAt(3);
+op3=str1.substring(0,5); 
+op4=str1.substr(0,5); 
+op5=str1.slice(3,10);
+
+op7=op5.toLowerCase();
+op8=str1.replace('FYBSCIT', 'SYBSCIT');
+document.getElementById("demo").innerHTML=op1+"<br>"+op2+"<br>"+op3+"<br>"+op4+"<br>"+op5+"<br>"+op6+"<br>"+op7+"<br>"+op8;
+document.write(op1);/
+</script>
+</body>
+</html>
