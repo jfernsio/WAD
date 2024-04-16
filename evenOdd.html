@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <input type="tel" placeholder="enter a number : " id ="input1" >
+    <!-- <input type="submit" id="input1"> -->
+    <input type="submit" id="submit1" onclick = "check()">
+
+<script>
+   
+    
+    function check() {
+        const userInput1 = parseInt(document.getElementById('input1').value);
+       let num = userInput1;
+        if(num % 2 == 0) {
+            document.write(userInput1,'is a even nuber');
+
+        } else {
+            document.write(userInput1,'is a odd number' );
+        }
+    }
+ </script>
+</body>
+</html>
